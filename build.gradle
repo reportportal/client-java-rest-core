@@ -1,0 +1,24 @@
+plugins {
+    id 'net.researchgate.release' version '2.4.1'
+    id "com.jfrog.bintray" version "1.7"
+}
+description = 'REST Client. Core'
+apply plugin: 'java'
+apply from: 'release.gradle'
+repositories {
+    jcenter()
+    maven { url "http://dl.bintray.com/epam/reportportal" }
+}
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.3.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.3.1'
+    compile 'com.epam.reportportal:httpclient-repacked:1.0.1'
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.google.code.findbugs:jsr305:2.0.3'
+    testCompile 'com.google.inject:guice:3.0'
+    testCompile 'com.google.mockwebserver:mockwebserver:20130706'
+    testCompile 'junit:junit:4.11'
+}
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.0'
+}
