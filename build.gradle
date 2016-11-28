@@ -10,8 +10,8 @@ repositories {
     maven { url "http://dl.bintray.com/epam/reportportal" }
 }
 dependencies {
-    compile 'com.fasterxml.jackson.core:jackson-annotations:2.3.1'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.3.1'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.7.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
     compile 'com.epam.reportportal:httpclient-repacked:1.0.1'
     compile 'com.google.guava:guava:18.0'
     compile 'com.google.code.findbugs:jsr305:2.0.3'
