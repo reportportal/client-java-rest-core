@@ -5,6 +5,10 @@ plugins {
 description = 'REST Client. Core'
 apply plugin: 'java'
 apply from: 'release.gradle'
+
+targetCompatibility = 1.7
+sourceCompatibility = 1.7
+
 repositories {
     jcenter()
     maven { url "http://dl.bintray.com/epam/reportportal" }
@@ -12,7 +16,7 @@ repositories {
 dependencies {
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.7.3'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
-    compile 'com.epam.reportportal:httpclient-repacked:1.0.1'
+    compile 'com.epam.reportportal:httpclient-repacked:1.0.2'
     compile 'com.google.guava:guava:18.0'
     compile 'com.google.code.findbugs:jsr305:2.0.3'
     testCompile 'com.google.inject:guice:3.0'
